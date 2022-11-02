@@ -8,8 +8,9 @@
 }
 
 .app {
-  height: 100vh;
-  width: 46vh;
+  height: 100%;
+  max-width: 500px;
+  width: 100%;
   margin: 0 auto;
   background-color: rgb(15, 23, 42);
   display: flex;
