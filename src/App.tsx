@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
 import "./App.css";
+import { useEffect, useState } from "react";
+import { Howl, Howler } from "howler";
 
 type Props = {};
 
@@ -14,6 +15,13 @@ const STATE = {
 const INHALE = "inhale";
 const HOLD = "hold";
 const EXHALE = "exhale";
+
+var sound = new Howl({
+  src: ["beep.mp3"],
+  autoplay: false,
+  loop: false,
+  volume: 0.1,
+});
 
 const STEP = {
   [INHALE]: {
@@ -48,6 +56,7 @@ const App = (props: Props) => {
       setSeconds((prev) => prev + 1);
     }, 1 * 1000);
     setTimeout(() => {
+      sound.play();
       setSeconds(1);
       setStep(STEP[step].nextStep);
     }, STEP[step].seconds * 1000);
@@ -75,7 +84,13 @@ const App = (props: Props) => {
         </div>
       )}
       {state === STATE.INPROGRESS && (
-        <h1 style={{ color: "white" }}>{seconds}</h1>
+        <h1 style={{ color: "white", textAlign: "center" }}>
+          {step === INHALE && "Inhale"}
+          {step === HOLD && "Hold"}
+          {step === EXHALE && "Exhale"}
+          <br />
+          {seconds}
+        </h1>
       )}
     </div>
   );

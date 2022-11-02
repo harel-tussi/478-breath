@@ -1,19 +1,23 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/howler': ^2.2.7
   '@types/react': ^18.0.24
   '@types/react-dom': ^18.0.8
   '@vitejs/plugin-react': ^2.2.0
+  howler: ^2.2.3
   react: ^18.2.0
   react-dom: ^18.2.0
   typescript: ^4.8.4
   vite: ^3.2.2
 
 dependencies:
+  howler: 2.2.3
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
 devDependencies:
+  '@types/howler': 2.2.7
   '@types/react': 18.0.24
   '@types/react-dom': 18.0.8
   '@vitejs/plugin-react': 2.2.0_vite@3.2.2
@@ -343,6 +347,10 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+    dev: true
+
+  /@types/howler/2.2.7:
+    resolution: {integrity: sha512-PEZldwZqJJw1PWRTpupyC7ajVTZA8aHd8nB/Y0n6zRZi5u8ktYDntsHj13ltEiBRqWwF06pASxBEvCTxniG8eA==}
     dev: true
 
   /@types/prop-types/15.7.5:
@@ -703,6 +711,10 @@ packages:
     dependencies:
       function-bind: 1.1.1
     dev: true
+
+  /howler/2.2.3:
+    resolution: {integrity: sha512-QM0FFkw0LRX1PR8pNzJVAY25JhIWvbKMBFM4gqk+QdV+kPXOhleWGCB6AiAF/goGjIHK2e/nIElplvjQwhr0jg==}
+    dev: false
 
   /is-core-module/2.11.0:
     resolution: {integrity: sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw==}
